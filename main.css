@@ -15,3 +15,7 @@ body {
 .fieldset {
     display: inline-block;
 }
+
+form {
+    margin-bottom: 15px;
+}
