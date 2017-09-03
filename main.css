@@ -1,0 +1,17 @@
+br {
+    content: "A" !important;
+    display: block !important;
+    margin-bottom: 1em;
+}
+
+input {
+    margin-left: 1em;
+}
+
+body {
+ font-family: 'Neucha', cursive;
+}
+
+.fieldset {
+    display: inline-block;
+}
