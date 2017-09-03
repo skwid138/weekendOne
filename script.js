@@ -12,21 +12,25 @@ function onReady( ) {
 //A 'Submit' button should collect the form information
 }
 
+// global array of employee objects
+var employeeList = [];
+
 function submit( ) {
     console.log('submit called');
     
 // store the information to calculate monthly costs
-    var $firstName = $('#firstName');
-    var $lastName = $('#lastName');
-    var $idNumber = $('idNumber');
-    var $jobTitle = $('jobTitle');
-    var $annualSalary = $('#annualSalary');
+    var $firstName = $('#firstName').val();
+    var $lastName = $('#lastName').val();
+    var $idNumber = Number ( $('#idNumber').val() );
+    var $jobTitle = $('#jobTitle').val();
+    var $annualSalary = Number( $('#annualSalary').val() );
     if (logTest) console.log('$firstName ->', $firstName);
     if (logTest) console.log('$lastName ->', $lastName);
     if (logTest) console.log('$idNumber ->', $idNumber);
     if (logTest) console.log('$jobTitle ->', $jobTitle);
     if (logTest) console.log('$annualSalary ->', $annualSalary);
-    
+
+    new Employee($firstName, $lastName, $idNumber, $jobTitle, $annualSalary)
     
 // append information to the DOM
 // clear the input fields
@@ -39,11 +43,29 @@ function Employee ( firstName, lastName, idNumber, jobTitle, annualSalary) {
     this.idNumber = idNumber;
     this.jobTitle = jobTitle;
     this.annualSalary = annualSalary;
+    console.log('new Employee ->', this);
+    
+    // push objects into global array
+    employeeList.push( this );
+    console.log('employeeList ->', employeeList);
+    
 }
 
-// Using the stored information
-// calculate monthly costs
+// looks at an array of employees and calculates the monthly cost
+function calcSalaries( employeeList ) {
+    // Using the stored information calculate monthly costs
+    // var for total salary
+    var totalSalary = 0;
+    // loop through array
+    for (var i = 0; i < employeeList.length; i++) {
+        totalSalary += employeeList[i].annualSalary;
+    }
+    var monthlyCost = totalSalary / 12;
+    return monthlyCost;
+}
 // append this to the to DOM
+
+
 
 // Hard Mode -- Create a delete button
 // Hard Mode -- that removes an employee from the DOM
