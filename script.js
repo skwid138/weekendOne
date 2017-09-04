@@ -21,7 +21,7 @@ function submit( ) {
 // store the information to calculate monthly costs
     var $firstName = $('#firstName').val();
     var $lastName = $('#lastName').val();
-    var $idNumber = Number ( $('#idNumber').val() );
+    var $idNumber = $('#idNumber').val();
     var $jobTitle = $('#jobTitle').val();
     var $annualSalary = Number( $('#annualSalary').val() );
     if (logTest) console.log('$firstName ->', $firstName);
@@ -47,6 +47,10 @@ function submit( ) {
     $('#idNumber').val( '' );
     $('#jobTitle').val( '' );
     $('#annualSalary').val( '' );
+
+    var $calcSalariesOutput = $('#calcSalariesOutput');
+
+    $calcSalariesOutput.text(calcSalaries(employeeList));
 }
 
 // builds objects with employee info
