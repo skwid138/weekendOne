@@ -42,6 +42,11 @@ function submit( ) {
     $employeeAppend.append("<td><span>" + $annualSalary + "</span></td>");
 
     // clear the input fields
+    $('#firstName').val( '' );
+    $('#lastName').val( '' );
+    $('#idNumber').val( '' );
+    $('#jobTitle').val( '' );
+    $('#annualSalary').val( '' );
 }
 
 // builds objects with employee info
