@@ -35,3 +35,8 @@ th, td {
 main {
    margin-bottom: 15px;
 }
+
+.removeButton {
+    display: block;
+    margin: auto;
+}
