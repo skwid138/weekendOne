@@ -4,17 +4,16 @@ var logTest = true;
 /*Create an application that records employee salaries
 and adds salaries up to report monthly costs. */
 
-// The application should have an input form that collects employee first name, last name, ID number, job title, annual salary.
-
 function onReady( ) {
     console.log('JQ Ready!')
+    //A 'Submit' button should collect the form information
     $('main').on('click', '#submit', submit)
-//A 'Submit' button should collect the form information
 }
 
 // global array of employee objects
 var employeeList = [];
 
+// The application should have an input form that collects employee first name, last name, ID number, job title, annual salary.
 function submit( ) {
     console.log('submit called');
     
