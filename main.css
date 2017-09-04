@@ -19,3 +19,15 @@ body {
 form {
     margin-bottom: 15px;
 }
+
+footer {
+    font-size: 12px;
+}
+
+table {
+    border: 2px solid red;
+}
+
+th, td {
+    border: 1px solid black;
+}

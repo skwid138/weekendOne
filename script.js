@@ -32,8 +32,16 @@ function submit( ) {
 
     new Employee($firstName, $lastName, $idNumber, $jobTitle, $annualSalary)
     
-// append information to the DOM
-// clear the input fields
+    var $employeeAppend = $('tbody:last-child');
+    // append information to the DOM
+    $employeeAppend.append("<tr>");
+    $employeeAppend.append("<td><span>" + $firstName + "</span></td>");
+    $employeeAppend.append("<td><span>" + $lastName + "</span></td>");
+    $employeeAppend.append("<td><span>" + $idNumber + "</span></td>");
+    $employeeAppend.append("<td><span>" + $jobTitle + "</span></td>");
+    $employeeAppend.append("<td><span>" + $annualSalary + "</span></td>");
+
+    // clear the input fields
 }
 
 // builds objects with employee info
