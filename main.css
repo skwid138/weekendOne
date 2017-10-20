@@ -10,6 +10,10 @@ input {
 
 body {
  font-family: 'Neucha', cursive;
+ /*
+ color: #08088F;
+ background-color: #1DC11D;
+ */
 }
 
 .fieldset {
@@ -25,7 +29,7 @@ footer {
 }
 
 table {
-    border: 2px solid red;
+    border: 2px solid #547404;
 }
 
 th, td {
